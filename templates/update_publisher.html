@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="/static/css/uppublisher.css" />
+  </head>
+
+  <body>
+    {{publishers}}
+
+    <form method="POST">
+      <div class="container">
+        <div class="header">
+          <h1>Publisher</h1>
+        </div>
+        <div class="main">
+          <label for="ID"> Identity:</label><br />
+          <input
+            readonly
+            placeholder="{{p_id[0]}}"
+            type="text"
+            id="ID"
+            name="ID"
+          /><br />
+          <label for="Name"> Name:</label><br />
+          <input
+            placeholder="{{p_name[0]}}"
+            type="text"
+            id="Name"
+            name="Name"
+          /><br />
+          <label for="City">City:</label><br />
+          <input
+            placeholder="{{p_city[0]}}"
+            type="text"
+            id="City"
+            name="City"
+          /><br />
+          <br />
+          <button type="submit" class="btn btn-success">Update</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

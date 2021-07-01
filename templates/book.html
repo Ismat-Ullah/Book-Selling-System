@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block title %}Book{% endblock %}
+{% block content %}
+      <div class="container">
+        
+    <h1 style="color: honeydew;">Book</h1>
+    <br/>
+    <form method="POST" action="">
+
+      <div class="form-group col-md-2">
+          <label for="IdInput">ID</label>
+          <input type="text" class="form-control" name="IdInput" id="IdInput" placeholder="Identity Number">
+        </div>
+    
+      
+      <div class="form-group">
+        <label for="NameInput">Name</label>
+        <input type="text" class="form-control" name="NameInput" id="NameInput" placeholder="Name">
+      </div>
+      <br/>
+      <div><label for="GenreInput">Choose Genre</label>
+        <select name="GenreInput" id="GenreInput">
+          <option value="Sci-Fiction">Sci-Fiction</option>
+          <option value="Love Story">Love Story</option>
+          <option value="Horror">Horror</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Crime">Crime</option>
+          <option value="Biography">Biography</option>
+          <option value="Fantasy">Fantasy</option>
+        </select></div>
+<br/>
+
+      <div class="form-group col-md-2">
+        <label for="ISBNInput">ISBN</label>
+        <input type="text" class="form-control" name="ISBNInput"  id="ISBNInput" placeholder="ISBN Number">
+      </div>
+
+    </br>
+    <!--........................Accessing Publisher ID's with Name.....................................-->
+    <select name="PIDInput" id = "PIDInput">
+    
+      {% for user, id in Publisher_Name|zip(Publisher_ID) %}
+         <option name="id" value="{{ id }}">{{ user }} with ID: {{id}}</option>
+      {% endfor %}
+      
+  </select>
+  
+  </br> </br>
+
+   <!--........................Accessing Authors Details.....................................-->
+   
+    <!--<select name="AIDInput" id = "AIDInput">-->
+    <!--<select class="select" name="AIDInput" id ="AIDInput" multiple size="4">
+    
+    {% for user, id in a_name|zip(a_id) %}
+       <option name="id" value="{{ id }}">{{user}} with ID: {{ id }}</option>
+    {% endfor %}
+    
+    </select>
+-->
+
+     
+      <div class="form-group">
+        <div>
+          <select name='AIDInput' multiple class="form-control">
+            {% for user, id in a_name|zip(a_id) %}
+            <option name="id" value="{{ id }}">{{user}} with ID: {{ id }}</option>
+         {% endfor %} 
+          </select>
+        </div>
+      </div>
+      <br/>
+      
+      <div class="form-group">
+        <div>
+          <select name='SIDInput' multiple class="form-control">
+            {% for user, id in s_name|zip(s_id) %}
+            <option name="id" value="{{ id }}">{{user}} with ID: {{ id }}</option>
+         {% endfor %} 
+          </select>
+        </div>
+      </div>
+    </br>
+      <button type="submit" class="btn btn-primary">Submit</button> 
+  
+  
+
+      
+       
+        
+        
+        
+    </form>
+     
+{% endblock %}
+      

@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=width-device, initial-scale1.0" />
+    <title></title>
+    <link rel="stylesheet" href="/static/css/read.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?
+    family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img src="/static/images/booklogo.png" class="logo" />
+        <nav>
+          <ul>
+            <li>
+              <a href="#">HOME</a>
+              <a href="#">About Us</a>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h1>RUD</h1>
+          <p>
+            CLICK ON DESIRED TABLE, OF WHICH YOU WANT TO READ/UPDATE/DELETE DATA
+          </p>
+          <a href="{{url_for('index')}}"
+            ><button type="button">Back To Book Selling System</button></a
+          >
+        </div>
+        <div class="col">
+          <a href="{{url_for('readbook')}}" class="custom-card">
+            <div class="card card1">
+              <h5>Book</h5>
+              <p>Click here To READ/EDIT/DELETE Data of Book Table</p>
+            </div></a
+          >
+
+          <a href="{{url_for('readauthor')}}" class="custom-card">
+            <div class="card card2">
+              <h5>Author</h5>
+              <p>Click here To READ/EDIT/DELETE Data of Author Table</p>
+            </div></a
+          >
+
+          <a href="{{url_for('readpublisher')}}" class="custom-card">
+            <div class="card card3">
+              <h5>Publisher</h5>
+              <p>Click here To READ/EDIT/DELETE Data of Publisher Table</p>
+            </div></a
+          >
+
+          <a href="{{url_for('readbuyer')}}" class="custom-card">
+            <div class="card card4">
+              <h5>Buyer</h5>
+              <p>Click here To READ/EDIT/DELETE Data of Buyer Table</p>
+            </div></a
+          >
+
+          <a href="{{url_for('readsponsor')}}" class="custom-card">
+            <div class="card card5">
+              <h5>Sponsor</h5>
+              <p>Click here To READ/EDIT/DELETE Data of Sponsor Table</p>
+            </div></a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

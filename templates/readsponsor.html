@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">City</th>
+          <th scope="col">Email</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for info in data%}
+        <tr>
+          <td>{{info.0}}</td>
+          <td>{{info.1}}</td>
+          <td>{{info.2}}</td>
+          <td>{{info.3}}</td>
+          <td>
+            <a
+              href="/update_sponsor/{{info.0}}"
+              class="btn btn-warning btn-xs"
+              data-toggle="modal"
+              data-target="ifno.0"
+              >Edit</a
+            >
+            <a
+              href="/sponsordelete/{{info.0}}"
+              class="btn btn-danger btn-xs"
+              onclick="return confirm('Are You Sure For Delete?')"
+              data-target="ifno.0"
+              data-toggle="modal"
+              >Delete</a
+            >
+          </td>
+        </tr>
+        {% endfor %}
+        <a class="btn btn-primary" href="/read" role="button">Back</a>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="/static/css/upbook.css" />
+  </head>
+
+  <body>
+    {{books}}
+
+    <form method="POST">
+      <div class="container">
+        <div class="header">
+          <h1>Book</h1>
+        </div>
+        <div class="main">
+          <label for="ID"> Identity:</label><br />
+          <input
+            readonly
+            placeholder="{{b_id[0]}}"
+            type="text"
+            id="ID"
+            name="ID"
+          /><br />
+          <label for="Name"> Name:</label><br />
+          <input
+            placeholder="{{b_name[0]}}"
+            type="text"
+            id="Name"
+            name="Name"
+          /><br />
+          <br />
+          <div>
+            <label for="Genre">Choose Genre</label>
+            <select name="Genre" id="Genre">
+              <option value="Sci-Fiction">Sci-Fiction</option>
+              <option value="Love Story">Love Story</option>
+              <option value="Horror">Horror</option>
+              <option value="Mystery">Mystery</option>
+              <option value="Crime">Crime</option>
+              <option value="Biography">Biography</option>
+              <option value="Fantasy">Fantasy</option>
+            </select>
+          </div>
+          <br />
+          <label for="ISBN">ISBN:</label><br />
+          <input
+            placeholder="{{b_isbn[0]}}"
+            type="text"
+            id="ISBN"
+            name="ISBN"
+          />
+          <br />
+          <br />
+          <button type="submit" class="btn btn-success">Update</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

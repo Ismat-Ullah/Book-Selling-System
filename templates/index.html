@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Book Management System</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="main">
+        <div class="logo">
+          <img src="/static/images/booklogo.png" />
+        </div>
+        <ul>
+          <b>
+            <li><a href="#">ISMAT ULLAH</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">HELP</a></li>
+          </b>
+        </ul>
+      </div>
+      <div class="title">
+        <h1>Book Management System</h1>
+      </div>
+      <div class="button">
+        <a href="{{ url_for('insert') }}" class="btn">CREATE</a>
+        <a href="{{ url_for('read') }}" class="btn">READ/UPDATE/DELETE/</a>
+      </div>
+    </header>
+  </body>
+</html>

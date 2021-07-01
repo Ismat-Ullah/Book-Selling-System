@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Author{% endblock %}
+{% block content %}
+      <div class="container">
+    <h1 style="color: honeydew;">Author</h1>
+    <br/>
+    <br/>
+    <form method="POST" action="">
+
+        <div class="form-group col-md-2">
+            <label for="IdInput">ID</label>
+            <input type="text" class="form-control" name="IdInput" id="IdInput" placeholder="Identity Number">
+          </div>
+      
+        
+        <div class="form-group">
+          <label for="NameInput">Name</label>
+          <input type="text" class="form-control" name="NameInput" id="NameInput" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label for="FatherNameInput">Father Name</label>
+          <input type="text" class="form-control" name="FatherNameInput" id="FatherNameInput" placeholder="Father Name">
+        </div>
+      </br>
+        <div><label for="GenderInput">Choose Gender</label>
+          <select name="GenderInput" id="GenderInput">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select></div>
+      </br>
+        <div class="form-group">
+            <label for="EmailInput">Email</label>
+            <input type="email" class="form-control" name="EmailInput" id="EmailInput" placeholder="EmailAddress@google.com">
+            <div id="EmailInput" class="form-text">We'll never share your email with anyone else.</div>
+          </div>  
+          
+         
+          <br/><br/>
+          
+          <br/>
+          <button type="submit" class="btn btn-primary">Submit</button>     
+      </form>
+
+      </div>
+     
+{% endblock %}
+      

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Publisher{% endblock %}
+{% block content %}
+     
+     
+      <div class="container">
+    <h1 style="color: honeydew;">Publishser</h1>
+    <br/>
+    <br/>
+
+    <form method="POST" action="">
+
+      <div class="form-group col-md-2">
+          <label for="IdInput">ID</label>
+          <input type="text" class="form-control" name="IdInput" id="IdInput" placeholder="Identity Number">
+        </div>
+    
+      
+      <div class="form-group">
+        <label for="NameInput">Name</label>
+        <input type="text" class="form-control" name="NameInput" id="NameInput" placeholder="Name">
+      </div>
+      <br/>
+      <div><label for="CityInput">Choose City</label>
+        <select name="CityInput" id="CityInput">
+          <option value="Islamabad">Islamabad</option>
+          <option value="Karachi">Karachi</option>
+          <option value="Lahore">Lahore</option>
+          <option value="Peshawer">Peshawer</option>
+          <option value="Quetta">Quetta</option>
+        </select></div>
+      <br/>
+
+      <div class="form-group">
+          <label for="EmailInput">Email</label>
+          <input type="email" class="form-control" name="EmailInput" id="EmailInput" placeholder="EmailAddress@google.com">
+          <div id="EmailInput" class="form-text">We'll never share your email with anyone else.</div>
+        </div>  
+        <br/><br/>
+        <button type="submit" class="btn btn-primary">Submit</button>     
+    </form>
+    
+      </div>
+{% endblock %}
